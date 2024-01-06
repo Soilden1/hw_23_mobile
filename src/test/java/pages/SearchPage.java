@@ -28,7 +28,7 @@ public class SearchPage {
         return this;
     }
 
-    @Step("Кликнуть на строку поиска с введенным запросом")
+    @Step("Кликнуть на введенный запрос")
     public SearchPage clickOnLineSearch(String query) {
         searchLine.shouldHave(text(query)).click();
         return this;

@@ -15,7 +15,6 @@ public class SearchTest extends TestBase {
     void successfulSearchTest() {
         searchPage.searchButtonClick()
                 .enterQuery("Appium")
-                .clickOnLineSearch("Appium")
                 .checkNotNull();
     }
 
@@ -24,8 +23,8 @@ public class SearchTest extends TestBase {
     void checkErrorMessageTest() {
         searchPage.searchButtonClick()
                 .enterQuery("Appium")
-                .clickOnLineSearch("Appium")
-                .checkNotNull();
+                .checkNotNull()
+                .clickOnLineSearch("Appium");
 
         wikipediaPage.checkErrorMessage("An error occurred")
                 .checkErrorButton("GO BACK");
